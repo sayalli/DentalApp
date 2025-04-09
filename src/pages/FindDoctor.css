@@ -1,0 +1,38 @@
+/* src/styles/FindDoctor.css */
+
+.doctor-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.doctor-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.doctor-card {
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-4px);
+}
+
+.no-result {
+  font-style: italic;
+}

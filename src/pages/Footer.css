@@ -1,0 +1,107 @@
+.footer {
+  background-color: #05163a;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+.footer-links,
+.footer-services,
+.footer-contact {
+  flex: 1;
+  margin: 10px;
+  min-width: 220px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-links ul,
+.footer-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-services li,
+.footer-contact p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #b0b3b8;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-links li:hover,
+.footer-services li:hover {
+  color: #00aaff;
+}
+
+.footer-contact p i,
+.footer-plus-icon {
+  color: #00aaff;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  color: white !important;
+}
+
+/* Social Media Icons */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  background: #00aaff;
+}
+
+.footer-social a i {
+  font-size: 18px;
+  color: white;
+}

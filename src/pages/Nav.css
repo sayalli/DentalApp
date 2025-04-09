@@ -1,0 +1,389 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p,
+li,
+a,
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #0e264f;
+  font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+  color: #2e86c1;
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: inherit;
+  background: linear-gradient(135deg, #4f9dff, #1e40af);
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  width: 100%;
+  height: 10rem;
+}
+
+/* Container */
+.container {
+  max-width: 132rem;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.logo img {
+  width: 10rem;
+  height: auto;
+}
+
+/* Navbar Grid */
+.navbar-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Navigation Wrapper */
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-wrapper li {
+  position: relative;
+  color: #0e264f;
+}
+
+/* Navigation Links */
+.nav-wrapper a,
+.web-content-link {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+
+  .nav-wrapper a,
+  .web-content-link {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+
+/* Dropdown Menu */
+.web-content-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.web-content-link {
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  border-radius: 5px;
+  padding: 0;
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown li {
+  padding: 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.dropdown li a {
+  display: block;
+  width: 100%;
+}
+
+.dropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+.web-content-menu:hover .dropdown,
+.show-dropdown {
+  display: block;
+}
+
+/* Hamburger Menu */
+.ham-menu {
+  display: none;
+}
+
+/*  Mobile & Tablet Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .logo span {
+    font-size: 1.8rem;
+  }
+
+  .logo img {
+    width: 4.5rem;
+  }
+
+  /* Hamburger Menu */
+  .ham-menu {
+    display: block;
+    text-align: end;
+  }
+
+  /* Hide Desktop Menu */
+  .menu-web {
+    display: none;
+  }
+
+  /* Mobile & Tablet Menu */
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem;
+    z-index: 999;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    /*  Make it look like a box */
+    height: 40rem;
+    /* Fixed height */
+    border-radius: 10px;
+    overflow-y: auto;
+    /* Enables scroll if content overflows */
+  }
+
+  .menu-mobile ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-mobile ul li {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0e264f;
+    /*  Make it look like a row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    /* Separator between rows */
+  }
+
+  .menu-mobile ul li:last-child {
+    border-bottom: none;
+  }
+
+  .menu-mobile ul li:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+  }
+
+  /* Adjust text size */
+  .nav-wrapper a,
+  .web-content-link {
+    font-size: 1.6rem;
+  }
+
+  /* Book Appointment Button */
+  .book-appointment-btn {
+    background: linear-gradient(135deg, #4f9dff, #1e40af);
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  }
+
+  .book-appointment-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+/*  Smaller Mobile Devices (Samsung Galaxy S8, iPhone SE) */
+@media (max-width: 400px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .logo span {
+    font-size: 1.6rem;
+  }
+
+  .logo img {
+    width: 4rem;
+  }
+
+  .menu-mobile {
+    padding: 1.5rem;
+  }
+
+  .menu-mobile ul li {
+    padding: 1rem;
+  }
+
+  .nav-wrapper a,
+  .web-content-link {
+    font-size: 1.4rem;
+  }
+
+  .book-appointment-btn {
+    font-size: 1.4rem;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/*  Fix Button Placement for Desktop */
+@media (max-width: 1024px) {
+  .book-appointment-btn {
+    width: 90%;
+    padding: 10px;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+}
+
+/*  Fix for Extra Small Devices */
+@media (max-width: 400px) {
+  .book-appointment-btn {
+    font-size: 1.4rem;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+/*  iPad Pro & Large Tablets Fix */
+@media (min-width: 990px) and (max-width: 1328px) {
+  .nav-wrapper ul {
+    gap: 4rem;
+  }
+
+  .book-appointment-btn {
+    font-size: 1.4rem;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #4f9dff, #1e40af);
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  }
+}
+
+/*  Fix Button Placement for Desktop */
+@media (min-width: 1024px) {
+  .appointment-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .book-appointment-btn {
+    padding: 12px 32px;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+}

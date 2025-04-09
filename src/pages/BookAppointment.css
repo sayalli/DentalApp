@@ -1,0 +1,168 @@
+/* Wrapper */
+.appointment-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+/* Form Container */
+.form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0e264f;
+  margin-bottom: 20px;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  color: #0e264f;
+}
+
+.textarea {
+  grid-column: span 2;
+  height: 80px;
+  resize: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+/* Contact Info Section */
+.contact-info {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  background: #0056b3;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0e264f;
+}
+
+.info-text {
+  font-size: 1.5rem;
+  color: #0e264f;
+font-weight: 700;
+line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .appointment-wrapper {
+    gap: 3rem;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .textarea {
+    grid-column: span 1;
+  }
+
+  .form-container,
+  .contact-info {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-title {
+    font-size: 20px;
+  }
+
+  .input-field,
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .info-title {
+    font-size: 14px;
+  }
+
+  .info-text {
+    font-size: 13px;
+  }
+}
